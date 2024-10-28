@@ -8,7 +8,7 @@ body {
 
 .App {
   text-align: center;
-  padding: 40px;
+  padding: 20px; 
 }
 
 nav ul {
@@ -48,4 +48,41 @@ h2 {
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px; 
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0; 
+  }
+
+  nav ul li a {
+    padding: 10px 20px; 
+    width: 100%;
+    text-align: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; 
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 15px; 
+  }
 }
