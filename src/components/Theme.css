@@ -1,0 +1,66 @@
+.theme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+  }
+  
+  .theme-container.light {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .theme-container.dark {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin-top: 20px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1b1b;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: rgb(212, 40, 40);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  input:checked + .toggle-label {
+    background-color: #050706;
+  }
+  
+  input:checked + .toggle-label:before {
+    transform: translateX(30px);
+  }
+  
